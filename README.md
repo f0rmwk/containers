@@ -142,6 +142,31 @@ container volume rm open-webui-data
 container volume rm ollama-data
 ```
 
+## Complete Uninstall
+
+To remove every component created by this setup:
+
+```bash
+# 1. Stop the containers (if running)
+container stop open-webui || true
+container stop ollama || true
+
+# 2. Remove the containers
+container rm open-webui || true
+container rm ollama || true
+
+# 3. Remove persistent volumes (deletes models, chats, caches)
+container volume rm open-webui-data || true
+container volume rm ollama-data || true
+
+# 4. Drop the custom network
+container network rm ai-stack || true
+
+# 5. (Optional) Delete downloaded images to reclaim space
+container image rm ghcr.io/open-webui/open-webui:main || true
+container image rm ollama/ollama || true
+```
+
 ## Troubleshooting
 
 - **“localhost refused to connect”** – ensure `container ls` shows both containers running; check logs for startup downloads.
