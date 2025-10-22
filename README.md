@@ -1,5 +1,7 @@
 # AI Stack Containers on macOS
 
+# To continue this session, run codex resume 019a08b4-f58a-7491-bd5b-4d75209e73af
+
 This project uses Apple’s `container` CLI to run two services locally:
 
 - **Ollama** – serves language models over HTTP so they can be pulled and run (`container` name: `ollama`).
