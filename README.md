@@ -1,6 +1,6 @@
 # AI Stack Containers on macOS
 
-# To continue this session, run codex resume 019a08b4-f58a-7491-bd5b-4d75209e73af
+To continue this session, run codex resume 019a08b4-f58a-7491-bd5b-4d75209e73af in /Users/form/containers
 
 This project uses Apple’s `container` CLI to run two services locally:
 
